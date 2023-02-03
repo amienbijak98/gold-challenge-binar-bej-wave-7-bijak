@@ -1,0 +1,38 @@
+{
+  "name": "gold-challenge-binar-bej-wave-7-bijak",
+  "version": "1.0.0",
+  "description": "Binar Academy Backend Javascript Bootcamp Gold Challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisedevguy/gold-challenge-binar-bej-wave-7-bijak.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Backend",
+    "Express",
+    "PostgreSQL",
+    "Sequelize",
+    "Challange",
+    "Project",
+    "Binar",
+    "Academy",
+    "RestAPI"
+  ],
+  "author": "Bijak Amien Muttaqie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wisedevguy/gold-challenge-binar-bej-wave-7-bijak/issues"
+  },
+  "homepage": "https://github.com/wisedevguy/gold-challenge-binar-bej-wave-7-bijak#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0"
+  }
+}
