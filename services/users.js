@@ -94,12 +94,12 @@ exports.Login = async function (param) {
       },
     });
 
-    console.log(user);
-    console.log(user[User].dataValues.username);
-
     if (user != null) {
-      const storedUser = [param.username, param.password];
-      if (storedUser[1] === user.password) {
+      const storedUser = [
+        user[0].dataValues.username,
+        user[0].dataValues.password,
+      ];
+      if (storedUser[1] === param.password) {
         hasil = "login berhasil";
       }
     }
