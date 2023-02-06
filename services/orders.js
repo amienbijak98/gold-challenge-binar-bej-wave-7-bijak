@@ -81,5 +81,3 @@ exports.DeleteOrder = async function (idParam) {
     throw error;
   }
 };
-
-// Order Detail

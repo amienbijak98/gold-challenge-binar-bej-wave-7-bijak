@@ -37,4 +37,11 @@ router.post("/orders", orderController.InsertOrder);
 router.put("/orders/:id", orderController.UpdateOrder);
 router.delete("/orders/:id", orderController.DeleteOrder);
 
+//API ORDER DETAILS
+router.get("/order_details", orderController.GetAllOrderDetail);
+router.get("/order_details/:id", orderController.GetOrderDetailByID);
+router.post("/order_details", orderController.InsertOrderDetail);
+router.put("/order_details/:id", orderController.UpdateOrderDetail);
+router.delete("/order_details/:id", orderController.DeleteOrderDetail);
+
 module.exports = router;
