@@ -75,3 +75,16 @@ exports.DeleteUser = async function (req, res) {
     return res.status(400).json({ status: 400, message: error.message });
   }
 };
+
+exports.Login = async function (req, res) {
+  try {
+    const loginBody = req.body;
+    const auth = await userService.Login(loginBody);
+    return res.status(200).json({
+      status: 200,
+      message: auth,
+    });
+  } catch (error) {
+    return res.status(400).json({ status: 400, message: error.message });
+  }
+};

@@ -84,3 +84,28 @@ exports.DeleteUser = async function (idParam) {
     throw error;
   }
 };
+
+exports.Login = async function (param) {
+  try {
+    let hasil = "login gagal";
+    const user = await User.findAll({
+      where: {
+        username: param.username,
+      },
+    });
+
+    console.log(user);
+    console.log(user[User].dataValues.username);
+
+    if (user != null) {
+      const storedUser = [param.username, param.password];
+      if (storedUser[1] === user.password) {
+        hasil = "login berhasil";
+      }
+    }
+    return hasil;
+  } catch (error) {
+    console.log("Terjadi error di repository: " + error);
+    throw error;
+  }
+};

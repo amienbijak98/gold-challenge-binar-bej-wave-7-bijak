@@ -13,6 +13,7 @@ router.get("/", (req, res) => {
 router.get("/users", userController.GetAllUser);
 router.get("/users/:id", userController.GetUserByID);
 router.post("/signup", userController.InsertUser);
+router.post("/login", userController.Login);
 router.put("/users/:id", userController.UpdateUser);
 router.delete("/users/:id", userController.DeleteUser);
 
