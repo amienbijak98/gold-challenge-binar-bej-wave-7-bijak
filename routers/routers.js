@@ -3,6 +3,7 @@ const router = express.Router();
 const userController = require("../controllers/users");
 const categoryController = require("../controllers/categories");
 const itemController = require("../controllers/items");
+const orderController = require("../controllers/orders");
 
 router.get("/", (req, res) => {
   res.send("Hello World! Bershasil routing");
@@ -28,5 +29,12 @@ router.get("/items/:id", itemController.GetItemByID);
 router.post("/items", itemController.InsertItem);
 router.put("/items/:id", itemController.UpdateItem);
 router.delete("/items/:id", itemController.DeleteItem);
+
+//API ORDERS
+router.get("/orders", orderController.GetAllOrder);
+router.get("/orders/:id", orderController.GetOrderByID);
+router.post("/orders", orderController.InsertOrder);
+router.put("/orders/:id", orderController.UpdateOrder);
+router.delete("/orders/:id", orderController.DeleteOrder);
 
 module.exports = router;
