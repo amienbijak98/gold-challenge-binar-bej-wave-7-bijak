@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Items.hasMany(order_detail, {
-        foreignKey: "item_id",
-      });
-      Items.belongsTo(categories);
+      // Items.hasMany(order_detail.order_detail, {
+      //   foreignKey: "item_id",
+      // });
+      // Items.belongsTo(categories);
     }
   }
   Items.init(
@@ -36,7 +36,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      category_id: DataTypes.INTEGER,
+      category_id: {
+        type: DataTypes.INTEGER,
+        references: "Categories",
+        key: "id",
+      },
     },
     {
       sequelize,

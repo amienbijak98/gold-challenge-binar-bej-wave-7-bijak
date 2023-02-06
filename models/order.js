@@ -12,10 +12,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.belongsTo(user);
-      Order.hasMany(order_detail, {
-        foreignKey: "order_id",
-      });
+      // this.belongsTo(user.User);
+      // this.hasMany(order_detail, {
+      //   foreignKey: "order_id",
+      // });
     }
   }
   Order.init(
@@ -31,6 +31,10 @@ module.exports = (sequelize, DataTypes) => {
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          foreignKey: "User",
+          key: "id",
+        },
       },
     },
     {
